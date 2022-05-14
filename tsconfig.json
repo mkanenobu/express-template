@@ -4,8 +4,9 @@
     "module": "commonjs",
     "sourceMap": true,
     "moduleResolution": "node",
+    "baseUrl": "./",
     "paths": {
-      "~": ["./src"]
+      "~/*": ["./src/*"]
     },
     "esModuleInterop": true,
     "strict": true,
