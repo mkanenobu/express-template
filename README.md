@@ -4,16 +4,19 @@
 
 Run development mode
 
-This is the same as parallel execute of `npm run build:dev` and `npm run start:dev`
-
 ```bash
 npm run dev
+# with port number
+PORT=5000 npm run dev
 ```
 
 Production build
 
 ```bash
 npm run build
+# With port number, need to specify port on build time
+# https://vitejs.dev/guide/env-and-mode.html#production-replacement
+PORT=5000 npm run build
 ```
 
 Run production build

@@ -29,7 +29,7 @@ const paramsByEnv = {
 };
 
 build({
-  entryPoints: [path.join(gitRoot, "src", "server.ts")],
+  entryPoints: [path.join(gitRoot, "src", "app.ts")],
   bundle: true,
   minify: false,
   sourcemap: true,

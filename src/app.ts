@@ -4,11 +4,11 @@ import { router } from "./routes";
 
 const port = process.env.PORT || 3000;
 
-const app = express();
+export const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan(process.env.NODE_ENV === "development" ? "dev" : "combined"));
+app.use(morgan(import.meta.env.DEV ? "dev" : "combined"));
 app.disable("x-powered-by");
 
 app.listen(port, () => {

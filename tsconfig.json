@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "composite": true,
     "target": "ESNext",
-    "module": "commonjs",
+    "module": "ESNext",
     "sourceMap": true,
     "moduleResolution": "node",
     "baseUrl": "./",
@@ -13,5 +14,5 @@
     "noEmit": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "vite.config.ts"]
 }
