@@ -33,3 +33,10 @@ Run type check
 ```bash
 npm run tc
 ```
+
+## Tech Stack
+
+- Express
+- TypeScript
+- Vitest
+- esbuild
