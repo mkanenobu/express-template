@@ -1,6 +1,6 @@
 const { execSync } = require("child_process");
 const path = require("path");
-const { build } = require("esbuild");
+const { build, analyzeMetafile } = require("esbuild");
 
 const gitRoot = execSync("git rev-parse --show-toplevel").toString().trim();
 const distDir = path.join(gitRoot, "dist");
@@ -30,6 +30,7 @@ const paramsByEnv = {
   },
   production: {
     outfile: path.join(distDir, "app.js"),
+    metafile: true,
   },
 };
 
@@ -47,8 +48,13 @@ build({
   ...paramsByEnv[env],
 })
   .then((buildResult) => {
-    const { warnings, errors } = buildResult;
+    const { warnings, errors, metafile } = buildResult;
     console.info({ warnings, errors });
+    if (metafile) {
+      analyzeMetafile(metafile).then((metaData) => {
+        console.info(metaData);
+      });
+    }
   })
   .catch((e) => {
     console.error(e);
