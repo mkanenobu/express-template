@@ -1,4 +1,4 @@
-import { test, expect, it } from "vitest";
+import { test, expect } from "vitest";
 import { handlerTester } from "../test-helper";
 import { pingHandler } from "~/handlers/ping-handler";
 
