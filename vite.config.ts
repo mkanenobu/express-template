@@ -5,6 +5,7 @@ import { VitePluginNode } from "vite-plugin-node";
 const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
 export default defineConfig({
+  clearScreen: false,
   server: {
     port,
   },

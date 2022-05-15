@@ -4,8 +4,6 @@ import { pingHandler } from "~/handlers/ping-handler";
 
 test("ping-handler", () => {
   const { responseBody, responseStatus } = handlerTester(pingHandler, {
-    method: "GET",
-    url: "/ping",
     ip: "::1",
   });
 
@@ -18,8 +16,6 @@ test("ping-handler", () => {
   // other pattern
   const { responseBody: responseBody2, responseStatus: responseStatus2 } =
     handlerTester(pingHandler, {
-      method: "GET",
-      url: "/ping",
       ip: "192.168.0.1",
     });
 
