@@ -41,5 +41,6 @@ npm run tc
 
 - Express
 - TypeScript
+- Vite
 - Vitest
 - esbuild
